@@ -1,0 +1,21 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="example-sidenav" #sidenav mode="side" opened="true">
+    <div class="category-header">
+      <p class="mat-title"  style="margin-left: 32px;">Hashing</p>
+    </div>
+    <a mat-button routerLink="sha1" routerLinkActive="active" class="side-button">SHA1</a>
+    <a mat-button routerLink="sha256" routerLinkActive="active" class="side-button">SHA256</a>
+    <a mat-button routerLink="md5" routerLinkActive="active" class="side-button">MD5</a>
+    <div class="category-header">
+      <h3 class="mat-title" style="margin-left: 32px;">Encryption</h3>
+    </div>
+    <a mat-button routerLink="aes" routerLinkActive="active" class="side-button">AES</a>
+    <a mat-button routerLink="tripledes" routerLinkActive="active" class="side-button">Triple DES</a>
+
+  </mat-sidenav>
+
+  <div class="content example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-sidenav-container>

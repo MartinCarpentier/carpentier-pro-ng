@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { NgMaterialModule } from './ng-material/ng-material.module';
+import {ItsecurityModule} from './itsecurity/itsecurity.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
     BrowserModule,
     NgMaterialModule,
     AppRoutingModule,
+    ItsecurityModule,
     DashboardModule
   ],
   bootstrap: [AppComponent]
