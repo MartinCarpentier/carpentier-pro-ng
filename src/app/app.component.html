@@ -1,6 +1,12 @@
 <mat-toolbar color="primary">
-  <p class="brand-icon">Fitness</p>
-  <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
-  <a mat-button routerLink="/workout" *ngIf="isLoggedIn()"  routerLinkActive="active">Workout</a>
-  <span class="fill-middle-space"></span>
+  <a mat-button class="brand-icon" routerLink="/dashboard" routerLinkActive="active">
+    <p class="brand-icon-button">Martin Carpentier</p>
+  </a>
+  <a mat-button routerLink="/mylinks" routerLinkActive="active">My links</a>
+  <a mat-button routerLink="/itsec" routerLinkActive="active">IT-Security</a>
+  <a mat-button routerLink="/aboutsite" routerLinkActive="active">About this site</a>
 </mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
