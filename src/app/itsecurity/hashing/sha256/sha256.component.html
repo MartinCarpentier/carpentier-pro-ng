@@ -1,3 +1,20 @@
-<p>
-  sha256 works!
-</p>
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>SHA256 Hash Maker</mat-card-title>
+    </mat-card-header>
+    <mat-card-subtitle>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p>stuff stuff</p>
+      <mat-form-field>
+        <input matInput placeholder="Enter text to hash here">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="onSubmit()" class="btn" color="primary">Hash</button>
+    </mat-card-actions>
+  </mat-card>
+  <h2 style="margin-left: 15px;">Previous hashes in this session (Nothing is saved)</h2>
+
+</div>
