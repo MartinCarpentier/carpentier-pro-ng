@@ -8,7 +8,7 @@
         <mat-card-content>
           <div>
             <mat-form-field style="margin-top: 3em; margin-bottom: 3em; width:100%;">
-              <input matInput placeholder="Enter text to hash here">
+              <input matInput [(ngModel)]="noHash" placeholder="Enter text to hash here">
             </mat-form-field>
           </div>
         </mat-card-content>
@@ -27,8 +27,8 @@
         <mat-card-header>
           <mat-card-title>Hashed value</mat-card-title>
         </mat-card-header>
-        <mat-card-content>
-
+        <mat-card-content style="word-wrap: break-word; padding: 5px;">
+          {{hash}}
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
@@ -36,12 +36,12 @@
   <div class="content-mobile">
     <mat-card>
       <mat-card-header>
-        <mat-card-title>SHA512 Hash maker</mat-card-title>
+        <mat-card-title aria-hidden="true">SHA512 Hash maker</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div>
           <mat-form-field>
-            <input matInput placeholder="Enter text to hash here">
+            <input matInput [(ngModel)]="noHash" placeholder="Enter text to hash here">
           </mat-form-field>
         </div>
       </mat-card-content>
@@ -54,6 +54,9 @@
       <mat-card-header>
         <mat-card-title>Hashed value</mat-card-title>
       </mat-card-header>
+      <mat-card-content style="word-wrap: break-word; padding: 5px;">
+        {{hash}}
+      </mat-card-content>
     </mat-card>
   </div>
 </div>

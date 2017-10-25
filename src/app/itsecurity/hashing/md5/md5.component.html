@@ -3,13 +3,13 @@
     <mat-grid-tile [colspan]="4">
       <mat-card style="width: 100%;">
         <mat-card-header style="margin-left: -10px;">
-          <mat-card-title aria-hidden="true">MD5 Hash Maker</mat-card-title>
+          <mat-card-title aria-hidden="true">MD5 Hash maker</mat-card-title>
           <mat-card-subtitle aria-hidden="true" style="color: lightcoral;">MD5 is considered unsafe</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <div>
             <mat-form-field style="margin-top: 3em; margin-bottom: 3em; width:100%;">
-              <input matInput placeholder="Enter text to hash here">
+              <input matInput [(ngModel)]="noHash" placeholder="Enter text to hash here">
             </mat-form-field>
           </div>
         </mat-card-content>
@@ -29,7 +29,7 @@
           <mat-card-title>Hashed value</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-
+          {{hash}}
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
@@ -37,13 +37,13 @@
   <div class="content-mobile">
     <mat-card>
       <mat-card-header>
-        <mat-card-title>MD5 Hash Maker</mat-card-title>
+        <mat-card-title>MD5 Hash maker</mat-card-title>
         <mat-card-subtitle style="color: lightcoral;">MD5 is considered unsafe</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <div>
           <mat-form-field>
-            <input matInput placeholder="Enter text to hash here">
+            <input matInput [(ngModel)]="noHash" placeholder="Enter text to hash here">
           </mat-form-field>
         </div>
       </mat-card-content>
@@ -56,6 +56,9 @@
       <mat-card-header>
         <mat-card-title>Hashed value</mat-card-title>
       </mat-card-header>
+      <mat-card-content>
+        {{hash}}
+      </mat-card-content>
     </mat-card>
   </div>
 </div>
