@@ -14,7 +14,7 @@ import {
   MatSelectModule,
   MatSnackBarModule,
   MatTableModule,
-  MatToolbarModule
+  MatToolbarModule, MatGridListModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     MatButtonModule,
     MatToolbarModule,
+    MatGridListModule,
     MatCardModule,
     MatRadioModule,
     MatSidenavModule,
@@ -46,6 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    MatGridListModule,
     MatRadioModule,
     MatListModule,
     MatDialogModule,
