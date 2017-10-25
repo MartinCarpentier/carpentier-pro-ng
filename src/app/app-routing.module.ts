@@ -15,6 +15,7 @@ import {AsymencryptionComponent} from "./itsecurity/asymencryption/asymencryptio
 import {RsaComponent} from "./itsecurity/asymencryption/rsa/rsa.component";
 import {GeneratekeypairComponent} from "./itsecurity/asymencryption/generatekeypair/generatekeypair.component";
 import {GeneratekeyComponent} from "./itsecurity/symencryption/generatekey/generatekey.component";
+import {Sha512Component} from "./itsecurity/hashing/sha512/sha512.component";
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
           { path: '', redirectTo: 'sha1', pathMatch: 'full' },
           { path: 'sha1', component: Sha1Component },
           { path: 'sha256', component: Sha256Component },
+          { path: 'sha512', component: Sha512Component },
           { path: 'md5', component: Md5Component },
         ]
       },

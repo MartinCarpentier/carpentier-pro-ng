@@ -6,6 +6,7 @@ import {AppRoutingModule} from '../../app-routing.module';
 import {Md5Component} from './md5/md5.component';
 import {Sha256Component} from './sha256/sha256.component';
 import {Sha1Component} from './sha1/sha1.component';
+import { Sha512Component } from './sha512/sha512.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import {Sha1Component} from './sha1/sha1.component';
     NgMaterialModule,
     AppRoutingModule
   ],
-  declarations: [HashingComponent, Sha1Component, Sha256Component, Md5Component]
+  declarations: [HashingComponent, Sha1Component, Sha256Component, Md5Component, Sha512Component]
 })
 export class HashingModule { }

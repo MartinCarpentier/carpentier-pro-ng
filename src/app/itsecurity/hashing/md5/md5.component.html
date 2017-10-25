@@ -1,21 +1,61 @@
 <div class="container">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>MD5 Hash Maker</mat-card-title>
-      <mat-card-subtitle>MD5 is considered unsafe</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-subtitle>
-    </mat-card-subtitle>
-    <mat-card-content>
-      <p>stuff stuff</p>
-        <mat-form-field>
-          <input matInput placeholder="Enter text to hash here">
-        </mat-form-field>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button (click)="onSubmit()" class="btn" color="primary">Hash</button>
-    </mat-card-actions>
-  </mat-card>
-  <h2 style="margin-left: 15px;">Previous hashes in this session (Nothing is saved)</h2>
+  <mat-grid-list cols="9" rowHeight="300px" class="no-content-mobile">
+    <mat-grid-tile [colspan]="4">
+      <mat-card style="width: 100%;">
+        <mat-card-header style="margin-left: -10px;">
+          <mat-card-title aria-hidden="true">MD5 Hash Maker</mat-card-title>
+          <mat-card-subtitle aria-hidden="true" style="color: lightcoral;">MD5 is considered unsafe</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div>
+            <mat-form-field style="margin-top: 3em; margin-bottom: 3em; width:100%;">
+              <input matInput placeholder="Enter text to hash here">
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+        <mat-card-actions  style="float:right">
+          <button mat-raised-button (click)="onSubmit()" class="btn" color="primary">Hash</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1">
+      <div>
+        <i class="fa fa-arrow-right fa-3x center"></i>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" >
+      <mat-card style="width: 100%; height: 80%;">
+        <mat-card-header>
+          <mat-card-title>Hashed value</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
 
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="content-mobile">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>MD5 Hash Maker</mat-card-title>
+        <mat-card-subtitle style="color: lightcoral;">MD5 is considered unsafe</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Enter text to hash here">
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="onSubmit()" class="btn" color="primary">Hash</button>
+      </mat-card-actions>
+    </mat-card>
+    <i class="fa fa-arrow-down fa-3x center content-mobile"></i>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Hashed value</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
 </div>
