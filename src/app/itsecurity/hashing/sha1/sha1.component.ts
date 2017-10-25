@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Sha1Component implements OnInit {
   private forge: any;
+  public noHash: string;
+  public hash: string;
   constructor() {
     this.forge = forge;
   }
@@ -18,8 +20,9 @@ export class Sha1Component implements OnInit {
 
   onSubmit() {
     const md = this.forge.md.sha1.create();
-    md.update('The quick brown fox jumps over the lazy dog');
-    console.log(md.digest().toHex());
+    md.update(this.noHash);
+    this.hash = md.digest().toHex();
+    console.log(this.hash);
   }
 
 }
